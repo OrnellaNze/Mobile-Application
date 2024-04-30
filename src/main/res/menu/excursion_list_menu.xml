@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Add Vacation"
+        android:id="@+id/add_vacation_button"/>
+
+    <item android:title="See Vacations"
+        android:id="@+id/see_vacations"/>
+
+    <item
+        android:id="@+id/view_all_excursions"
+        android:title="View All Excursions"
+        app:showAsAction="never" />
+
+</menu>

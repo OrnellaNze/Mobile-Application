@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textViewVacationTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonEditVacation"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:text="Vacation Title" />
+
+    <TextView
+        android:id="@+id/textViewVacationHotel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/textViewVacationTitle"
+        app:layout_constraintTop_toBottomOf="@id/textViewVacationTitle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        tools:text="Hotel Name" />
+
+    <TextView
+        android:id="@+id/textViewStartDates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/textViewVacationHotel"
+        app:layout_constraintTop_toBottomOf="@id/textViewVacationHotel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        tools:text="Start Dates" />
+
+    <TextView
+        android:id="@+id/textViewEndDates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/textViewStartDates"
+        app:layout_constraintTop_toBottomOf="@id/textViewStartDates"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        tools:text="End Dates" />
+
+    <Button
+        android:id="@+id/buttonEditVacation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        app:layout_constraintEnd_toStartOf="@id/buttonDeleteVacation"
+        app:layout_constraintBottom_toBottomOf="@id/buttonDeleteVacation"
+        app:layout_constraintTop_toTopOf="@id/buttonDeleteVacation" />
+
+    <Button
+        android:id="@+id/buttonDeleteVacation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/expandButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excursions"
+        app:layout_constraintBottom_toTopOf="@id/excursionsRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEndDates" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/excursionsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/expandButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
